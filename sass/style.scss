@@ -5,9 +5,8 @@
 
 // Variables :
 
-$pink: rgb(177, 66, 169);
-$collection: rgb(27, 109, 141);
-$delivery: rgba(81, 158, 189, 0.8);
+$main_color: rgb(177, 66, 169);
+$second_color: rgba(81, 158, 189, 0.8);
 
 
 %display_flex {
@@ -46,7 +45,7 @@ a {
 }
 
 .dot {
-    color: $pink;
+    color: $main_color;
 }
 
 // vignette :
@@ -64,7 +63,7 @@ a {
 
 }
 
-// Flags vignette :
+// Flags des vignettes :
 
 .vignette__flags {
     @extend %display_flex;
@@ -79,11 +78,11 @@ a {
     }
 
     .vignette__flag--left {
-        background-color: $pink;
+        background-color: $main_color;
     }
 
     .vignette__flag--right {
-        background-color: $delivery;
+        background-color: $second_color;
     }
 
     .vignette__flag--left--collection {
@@ -153,7 +152,7 @@ a {
     padding-bottom: 20px;
 }
 .vignette__content__right__percentage {
-    color: $pink;
+    color: $main_color;
     font-weight: bold;
 }
 
@@ -183,8 +182,7 @@ a {
     color: rgb(78, 78, 78);
 }
 
-
-
+// vignette 1 et 6 :
 
 .vignette__divided {
     width: 360px;
@@ -234,7 +232,7 @@ a {
         height: fit-content;
     }
 
-    .vignette__divided__content__img {
+    .vignette__divided__content .vignette__divided__content__img {
         width: 150px;
     }
 

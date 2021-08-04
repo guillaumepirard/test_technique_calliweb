@@ -231,7 +231,7 @@ a {
     height: fit-content;
   }
 
-  .vignette__divided__content__img {
+  .vignette__divided__content .vignette__divided__content__img {
     width: 150px;
   }
 
