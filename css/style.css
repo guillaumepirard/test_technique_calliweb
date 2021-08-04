@@ -1,0 +1,247 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+.vignette__divided__content, .vignette__content__left__colors, .vignette__flags, .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vignette__divided__content, .vignette {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.container {
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100vw;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: fit-content;
+}
+
+.dot {
+  color: #b142a9;
+}
+
+.vignette {
+  width: 360px;
+  height: 320px;
+  margin: 20px;
+  border-bottom: 1px solid #e9e9e9;
+}
+.vignette:hover {
+  transform: scale(1.05);
+}
+
+.vignette__flags {
+  justify-content: space-between;
+}
+.vignette__flags .vignette__flag {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.2rem;
+  font-size: 0.8rem;
+}
+.vignette__flags .vignette__flag--left {
+  background-color: #b142a9;
+}
+.vignette__flags .vignette__flag--right {
+  background-color: rgba(81, 158, 189, 0.8);
+}
+.vignette__flags .vignette__flag--left--collection {
+  background-color: rgba(49, 111, 136, 0.8);
+}
+
+.vignette__contents {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 90px;
+}
+
+.vignette__contents__left {
+  width: 66%;
+}
+
+.vignette__content__left__title {
+  text-transform: uppercase;
+  color: #4e4e4e;
+  font-weight: bold;
+  margin-bottom: 3px;
+  font-size: 0.9rem;
+}
+
+.vignette__content__left__description {
+  color: #686868;
+  font-size: 0.8rem;
+  width: 80%;
+  line-height: 12px;
+}
+
+.vignette__content__left__special {
+  color: #8d8d8d;
+  font-size: 0.6rem;
+  margin-top: 5px;
+  width: 80%;
+  text-transform: uppercase;
+}
+
+.vignette__content__left__colors {
+  position: absolute;
+  bottom: 18px;
+  left: 0;
+}
+.vignette__content__left__colors .vignette__content__left__colors__img {
+  width: 30px;
+}
+.vignette__content__left__colors .vignette__content__left__colors__text {
+  font-size: 0.6rem;
+}
+
+.vignette__contents__right {
+  width: 50%;
+  text-align: right;
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  padding-bottom: 20px;
+}
+
+.vignette__content__right__percentage {
+  color: #b142a9;
+  font-weight: bold;
+}
+
+.vignette__content__right__range {
+  color: #686868;
+}
+
+.vignette__content__right__price {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.vignette__content__right__price .vignette__content__right__price--old {
+  color: #999999;
+  text-decoration: line-through;
+  margin-right: 12px;
+}
+.vignette__content__right__price .vignette__content__right__price--special {
+  color: #4e4e4e;
+}
+
+.vignette__content__right__participation {
+  font-size: 0.7rem;
+  color: #4e4e4e;
+}
+
+.vignette__divided {
+  width: 360px;
+  height: 320px;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.vignette__divided__content {
+  width: 100%;
+  height: 48%;
+  background-color: rgba(183, 201, 209, 0.8);
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.vignette__divided__content .vignette__divided__content__title {
+  font-weight: bold;
+  font-size: 1.7rem;
+  padding-left: 25px;
+}
+.vignette__divided__content .vignette__divided__content__img {
+  position: absolute;
+  right: -15%;
+  width: 200px;
+}
+.vignette__divided__content:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 400px) {
+  .vignette__content__right__price--old, .vignette__content__right__price--special {
+    font-size: 1.2rem;
+  }
+
+  .vignette {
+    height: fit-content;
+  }
+
+  .vignette__divided__content__img {
+    width: 150px;
+  }
+
+  .vignette__content__left__colors {
+    bottom: 0px;
+  }
+
+  .vignette__contents__right {
+    bottom: -18px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

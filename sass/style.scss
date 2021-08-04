@@ -1,0 +1,247 @@
+// imports
+
+@import "libs/reset.scss";
+
+
+// Variables :
+
+$pink: rgb(177, 66, 169);
+$collection: rgb(27, 109, 141);
+$delivery: rgba(81, 158, 189, 0.8);
+
+
+%display_flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%animation {
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+
+// code SASS :
+
+// global :
+
+html {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.container {
+    @extend %display_flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100vw;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: fit-content;
+}
+
+.dot {
+    color: $pink;
+}
+
+// vignette :
+
+.vignette {
+    width: 360px;
+    height: 320px;
+    margin: 20px;
+    border-bottom: 1px solid rgb(233, 233, 233);
+    @extend %animation;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+}
+
+// Flags vignette :
+
+.vignette__flags {
+    @extend %display_flex;
+    justify-content: space-between;
+
+    .vignette__flag {
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 0.2rem;
+        font-size: 0.8rem;
+    }
+
+    .vignette__flag--left {
+        background-color: $pink;
+    }
+
+    .vignette__flag--right {
+        background-color: $delivery;
+    }
+
+    .vignette__flag--left--collection {
+        background-color: rgba(49, 111, 136, 0.8);
+    }
+
+}
+
+// Contenu des vignettes
+
+.vignette__contents {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 90px;
+}
+
+// Contenu de la partie gauche
+
+.vignette__contents__left {
+    width: 66%;
+}
+.vignette__content__left__title {
+    text-transform: uppercase;
+    color: rgb(78, 78, 78);
+    font-weight: bold;
+    margin-bottom: 3px;
+    font-size: 0.9rem;
+}
+
+.vignette__content__left__description {
+    color: rgb(104, 104, 104);
+    font-size: 0.8rem;
+    width: 80%;
+    line-height: 12px;
+}
+
+.vignette__content__left__special {
+    color: rgb(141, 141, 141);
+    font-size: 0.6rem;
+    margin-top: 5px;
+    width: 80%;
+    text-transform: uppercase;
+}
+
+.vignette__content__left__colors {
+    @extend %display_flex;
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    .vignette__content__left__colors__img {
+        width: 30px;
+    }
+    .vignette__content__left__colors__text {
+        font-size: 0.6rem;
+    }
+}
+
+// Contenu de la partie droite
+
+.vignette__contents__right {
+    width: 50%;
+    text-align: right;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    padding-bottom: 20px;
+}
+.vignette__content__right__percentage {
+    color: $pink;
+    font-weight: bold;
+}
+
+.vignette__content__right__range {
+    color: rgb(104, 104, 104);
+}
+
+.vignette__content__right__price {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    .vignette__content__right__price--old {
+        color: rgb(153, 153, 153);
+        text-decoration: line-through;
+        margin-right: 12px;
+    }
+
+    .vignette__content__right__price--special {
+        color: rgb(78, 78, 78);
+    }
+}
+
+.vignette__content__right__participation {
+    font-size: 0.7rem;
+    color: rgb(78, 78, 78);
+}
+
+
+
+
+.vignette__divided {
+    width: 360px;
+    height: 320px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.vignette__divided__content {
+
+    width: 100%;
+    height: 48%;
+    background-color: rgba(183, 201, 209, 0.8);
+    @extend %display_flex;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    @extend %animation;
+
+    .vignette__divided__content__title {
+        font-weight: bold;
+        font-size: 1.7rem;
+        padding-left: 25px;
+    }
+    .vignette__divided__content__img {
+        position: absolute;
+        right: -15%;
+        width: 200px;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+}
+
+// MediaQueries :
+
+@media screen and (max-width: 400px) {
+    .vignette__content__right__price--old, .vignette__content__right__price--special {
+        font-size: 1.2rem;
+    }
+
+    .vignette {
+        height: fit-content;
+    }
+
+    .vignette__divided__content__img {
+        width: 150px;
+    }
+
+    .vignette__content__left__colors {
+        bottom: 0px;
+    }
+    .vignette__contents__right {
+        bottom: -18px;
+    }
+}
