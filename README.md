@@ -3,7 +3,7 @@
 ### Consignes du test : 
 
 Le test consiste à refaire une maquette de site de ecommerce commercialisant des canapés.
-l'intégration est uniquement en HTML/CSS, en suivant les consignes suivantes :
+l'intégration est à faire uniquement en HTML/CSS, en suivant les consignes suivantes :
 
 * Utilisation de Sass/SCSS, par la méthode de mon choix 
 * Utilisation de la méthode BEM, réduire au maximum le niveau d'héritage des règles CSS 
