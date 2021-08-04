@@ -1,12 +1,15 @@
 # Test technique CalliWeb
 
-### Description du test : 
+### Consignes du test : 
 
 Le test consiste à refaire une maquette de site de ecommerce commercialisant des canapés.
-Pour ce faire, j'ai du utiliser les langages suivants :
+l'intégration est uniquement en HTML/CSS, en suivant les consignes suivantes :
 
-* HTML
-* SCSS / SASS
+* Utilisation de Sass/SCSS, par la méthode de mon choix 
+* Utilisation de la méthode BEM, réduire au maximum le niveau d'héritage des règles CSS 
+* Utilisation au maximum du possible de Flexbox pour la disposition des éléments
+* Rendre le résultat responsive en mobile-first de façon à ce que la grille des produits soit agréable à regarder sur tous les devices, par l'utilisation de colonnes bootstrap par exemple
+* Que les éléments d'une même ligne fassent la même hauteur peu importe le contenu (titres ou descriptions qui passent à la ligne ou la résolution etc...)
 
 ### Pour écrire le code en SCSS :
 
